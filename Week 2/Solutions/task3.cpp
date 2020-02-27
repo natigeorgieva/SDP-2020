@@ -2,10 +2,9 @@
 using namespace std;
 
 class IntArray{
-public:
     int n, *ptr;
 
-private:
+public:
 
     ///Because we override our default constructor
     ///it is for the best to create it back
