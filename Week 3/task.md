@@ -14,12 +14,13 @@
 
 Пример:
 Bulgarian National Bank -> BNB
-self-contained underwater breathing equipment -> SCUBA
+self-contained underwater breathing apparatus -> SCUBA
 
 ## Задача 3 
 
 Да се напише клас myString, който да съдържа с-низ, със следните операции:
 
+* Конструктор, който по даден c-низ( char* ) да го запише в обекта
 * По даден низ да се презаписва текущия
 * По даден низ да се сравнят лексикографски и да връща съответното число
 
@@ -31,7 +32,7 @@ self-contained underwater breathing equipment -> SCUBA
     * Пример: 
 
         Низ в обекта = The big brown fox jumped over the lazy dog
-        
+
             big -> 4
             fox -> 14
 
@@ -45,3 +46,5 @@ self-contained underwater breathing equipment -> SCUBA
             brown fox jumped -> The big  over the lazy dog
 * По даден низ да конкатенира в края с низа от обекта
 * По даден низ да конкатенира в началото с низа от обекта
+
+Класа да се раздели на отделни файлове.
