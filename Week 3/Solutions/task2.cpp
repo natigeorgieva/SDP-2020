@@ -5,59 +5,80 @@ using namespace std;
 const int MAX_LEN = 100;
 
 char* makeAcronym(char* inpt){
+
+    ///Ако указателя не сочи към нищо то няма какво да правим
     if(inpt == nullptr){
         return nullptr;
     }
 
+    ///Създаваме си нов масив за акронима
     char* acronym = new char[MAX_LEN];
 
-    int currPos = 0, currStart = -1, currLen = 0, posAcronym = 0;
 
+    int currPos = 0,    ///Позицията на която сме в момента върху масива
+        currStart = -1, ///Текущата позиция на подниза, който ще обработваме
+        currLen = 0,    ///Текущата големина на подниза, който обработваме
+        posAcronym = 0; ///Позицията на текущия елемент на масива за акронима
+
+    ///Докато не сме стигнали до края на низа
     while(inpt[currPos] != '\0'){
 
+        ///Ако намерим буква
         if(isalpha(inpt[currPos])){
-            currStart = currPos;
+            currStart = currPos; ///Запазваме началото на текущия подниз
 
+            ///Докато текущата позиция е символ
             while(isalpha(inpt[currPos])){
+                 ///Увеличаваме си позицията с 1 и размера на подниза също с 1
                  currPos++;
                  currLen++;
             }
 
+            ///След като сме достигнали или края на подниза или на главния масив проверяваме
+            ///дали размера удовлетворява този за акроним
             if(currLen > 1){
+                ///На поредната позиция в масива с акронима му задаваме глваната буква на първата буква в текущия подниз
                 acronym[posAcronym] = toupper(inpt[currStart]);
                 posAcronym++;
             }
 
+            ///Зануляваме си броячие да не се обърка нещо
             currStart = -1;
             currLen = 0;
         }
+
+        ///Ако не е намерена буква то просто преминаваме наляво в низа
         else{
             currPos++;
         }
     }
 
+    ///След евентуалното съзадаване на акронима си слагаме терминиращата нула
     acronym[posAcronym] = '\0';
 
+    ///И за финал връщаме адреса на масива с акронима
+    ///Забележка: Тъй като в тази функция няма как да ичистим паметта без да развалим резултата
+    ///То за това трябва да се погрижи потребителя, когато използва тази функция
     return acronym;
 }
 
 
 int main(){
-    ///�R���x�t�p�r�p�}�u ���y ���{�p�x�p���u�| �{���} char �y �}�� �x�p���y���r�p�}�u �p�t���u���p �r�����~�p�� ���� new
-    ///�{���t�u���� ���}�u �x�p�t�u�|�y�|�y ���p�}�u�����p �x�p �}�p���y�r�p
+    ///Създаваме си указател към char и му записваме адреса върнат от new
+    ///където сме заделили паметта за масива
     char* inpt = new char[MAX_LEN];
 
-    ///�R���x�t�p�r�p�}�u ���{�p�x�p���u�|, �r �{���z���� �t�p �x�p���y���u�} �p�t���u���p, �{���t�u���� ���u �~�p�}�y���p �p�{�����~�y�}�p
-    ///�H�p�~���|���r�p�}�u �s�� �x�p �t���q���p �����p�{���y�{�p �����} �~���}�p �r�u�u�t�~�p�s�p �t�p �}�� �x�p���y���u�} �p�t���u��
+    ///Създаваме указател, в който да запишем адреса, където се намира акронима
+    ///Зануляваме го за добра практика щом няма вееднага да му запишем адрес
     char* result = nullptr;
 
 
     cout<<"Enter a string (max length "<<MAX_LEN-1<<"): ";
     /**
-        �P���~�u�w�u �y���{�p�}�u �t�p �r���r�u�t�u�} ���y�}�r���|�u�~ �~�y�x �y�x�����|�x�r�p�}�u cin.getline(), �~�p
-        �{���z���� �����t�p�r�p�}�u �{���t�u �t�p �x�p���y���u �r���r�u�t�u�~�y�� �~�y�x �y �� �{�p�{�r�p �}�p�{���y�}�p�|�~�p �t���|�w�y�~�p
-        �B ���|�����p�� �����~�u�w�u �}�p���y�r�p �u �� �t���|�w�y�~�p MAX_LEN �y �������q�r�p �t�p �x�p���y���u�} ���u���}�y�~�y���p���y ���y�}�r���|
-        ���u �y�}�p�}�u �~�p�z-�s���|���}�p �t���|�w�y�~�p �~�p �~�y�x�p MAX_LEN - 1
+        Понеже искаме да въведем символен низ използваме cin.getline(), на
+        който подаваме къде да запише въведения низ и с каква максимална дължина
+        В случая понеже масива е с дължина MAX_LEN и трябва да запишем терминиращи символ
+        ще имаме най-голяма дължина на низа MAX_LEN - 1
     */
     cin.getline(inpt, MAX_LEN);
 
