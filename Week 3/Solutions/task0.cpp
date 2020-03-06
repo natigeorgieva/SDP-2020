@@ -4,12 +4,12 @@ using namespace std;
 const int MAX_LEN = 100;
 
 int len(char* ptr){
-    ///„B„Œ„r„u„w„t„p„}„u „q„‚„€„‘„‰, „{„€„z„„„€ „t„p „€„„„q„‚„€„‘„r„p „„„u„{„…„‹„y„‘ „‚„p„x„}„u„‚ „~„p „ƒ„y„}„r„€„|„~„y„‘ „~„y„x
-    ///„S„€„x„y „q„‚„€„‘„‰ „‹„u „~„y „ƒ„|„…„w„y „y „x„p „t„p „„€„}„~„y„} „~„p „{„€„‘ „„€„x„y„ˆ„y„‘ „r „}„p„ƒ„y„r„p „ƒ„}„u „ƒ„„„y„s„~„p„|„y
+    ///Ð’ÑŠÐ²ÐµÐ¶Ð´Ð°Ð¼Ðµ Ð±Ñ€Ð¾ÑÑ‡, ÐºÐ¾Ð¹Ñ‚Ð¾ Ð´Ð° Ð¾Ñ‚Ð±Ñ€Ð¾ÑÐ²Ð° Ñ‚ÐµÐºÑƒÑ‰Ð¸Ñ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð½Ð° ÑÐ¸Ð¼Ð²Ð¾Ð»Ð½Ð¸Ñ Ð½Ð¸Ð·
+    ///Ð¢Ð¾Ð·Ð¸ Ð±Ñ€Ð¾ÑÑ‡ Ñ‰Ðµ Ð½Ð¸ ÑÐ»ÑƒÐ¶Ð¸ Ð¸ Ð·Ð° Ð´Ð° Ð¿Ð¾Ð¼Ð½Ð¸Ð¼ Ð½Ð° ÐºÐ¾Ñ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ñ Ð² Ð¼Ð°ÑÐ¸Ð²Ð° ÑÐ¼Ðµ ÑÑ‚Ð¸Ð³Ð½Ð°Ð»Ð¸
     int result = 0;
 
-    ///„D„€„{„p„„„€ „~„u „ƒ„‚„u„‹„~„u„} „{„‚„p„‘ „~„p „ƒ„y„}„r„€„|„~„y„‘ „~„y„x („„„u„‚„}„y„~„y„‚„p„‹„p„„„p „~„…„|„p)
-    ///„T„r„u„|„y„‰„r„p„}„u „q„‚„€„‘„‰„p
+    ///Ð”Ð¾ÐºÐ°Ñ‚Ð¾ Ð½Ðµ ÑÑ€ÐµÑ‰Ð½ÐµÐ¼ ÐºÑ€Ð°Ñ Ð½Ð° ÑÐ¸Ð¼Ð²Ð¾Ð»Ð½Ð¸Ñ Ð½Ð¸Ð· (Ñ‚ÐµÑ€Ð¼Ð¸Ð½Ð¸Ñ€Ð°Ñ‰Ð°Ñ‚Ð° Ð½ÑƒÐ»Ð°)
+    ///Ð£Ð²ÐµÐ»Ð¸Ñ‡Ð²Ð°Ð¼Ðµ Ð±Ñ€Ð¾ÑÑ‡Ð°
     while(ptr[result] != '\0'){
         result++;
     }
@@ -18,17 +18,17 @@ int len(char* ptr){
 }
 
 int main(){
-    ///„R„Œ„x„t„p„r„p„}„u „ƒ„y „…„{„p„x„p„„„u„| „{„Œ„} char „y „}„… „x„p„„y„ƒ„r„p„}„u „p„t„‚„u„ƒ„p „r„Œ„‚„~„p„„ „€„„ new
-    ///„{„Œ„t„u„„„€ „ƒ„}„u „x„p„t„u„|„y„|„y „„p„}„u„„„„„p „x„p „}„p„ƒ„y„r„p
+    ///Ð¡ÑŠÐ·Ð´Ð°Ð²Ð°Ð¼Ðµ ÑÐ¸ ÑƒÐºÐ°Ð·Ð°Ñ‚ÐµÐ» ÐºÑŠÐ¼ char Ð¸ Ð¼Ñƒ Ð·Ð°Ð¿Ð¸ÑÐ²Ð°Ð¼Ðµ Ð°Ð´Ñ€ÐµÑÐ° Ð²ÑŠÑ€Ð½Ð°Ñ‚ Ð¾Ñ‚ new
+    ///ÐºÑŠÐ´ÐµÑ‚Ð¾ ÑÐ¼Ðµ Ð·Ð°Ð´ÐµÐ»Ð¸Ð»Ð¸ Ð¿Ð°Ð¼ÐµÑ‚Ñ‚Ð° Ð·Ð° Ð¼Ð°ÑÐ¸Ð²Ð°
     char* inpt = new char[MAX_LEN];
 
 
     cout<<"Enter a string (max length "<<MAX_LEN-1<<"): ";
     /**
-        „P„€„~„u„w„u „y„ƒ„{„p„}„u „t„p „r„Œ„r„u„t„u„} „ƒ„y„}„r„€„|„u„~ „~„y„x „y„x„„€„|„x„r„p„}„u cin.getline(), „~„p
-        „{„€„z„„„€ „„€„t„p„r„p„}„u „{„Œ„t„u „t„p „x„p„„y„Š„u „r„Œ„r„u„t„u„~„y„‘ „~„y„x „y „ƒ „{„p„{„r„p „}„p„{„ƒ„y„}„p„|„~„p „t„Œ„|„w„y„~„p
-        „B „ƒ„|„…„‰„p„‘ „„€„~„u„w„u „}„p„ƒ„y„r„p „u „ƒ „t„Œ„|„w„y„~„p MAX_LEN „y „„„‚„‘„q„r„p „t„p „x„p„„y„Š„u„} „„„u„‚„}„y„~„y„‚„p„‹„y „ƒ„y„}„r„€„|
-        „‹„u „y„}„p„}„u „~„p„z-„s„€„|„‘„}„p „t„Œ„|„w„y„~„p „~„p „~„y„x„p MAX_LEN - 1
+        ÐŸÐ¾Ð½ÐµÐ¶Ðµ Ð¸ÑÐºÐ°Ð¼Ðµ Ð´Ð° Ð²ÑŠÐ²ÐµÐ´ÐµÐ¼ ÑÐ¸Ð¼Ð²Ð¾Ð»ÐµÐ½ Ð½Ð¸Ð· Ð¸Ð·Ð¿Ð¾Ð»Ð·Ð²Ð°Ð¼Ðµ cin.getline(), Ð½Ð°
+        ÐºÐ¾Ð¹Ñ‚Ð¾ Ð¿Ð¾Ð´Ð°Ð²Ð°Ð¼Ðµ ÐºÑŠÐ´Ðµ Ð´Ð° Ð·Ð°Ð¿Ð¸ÑˆÐµ Ð²ÑŠÐ²ÐµÐ´ÐµÐ½Ð¸Ñ Ð½Ð¸Ð· Ð¸ Ñ ÐºÐ°ÐºÐ²Ð° Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»Ð½Ð° Ð´ÑŠÐ»Ð¶Ð¸Ð½Ð°
+        Ð’ ÑÐ»ÑƒÑ‡Ð°Ñ Ð¿Ð¾Ð½ÐµÐ¶Ðµ Ð¼Ð°ÑÐ¸Ð²Ð° Ðµ Ñ Ð´ÑŠÐ»Ð¶Ð¸Ð½Ð° MAX_LEN Ð¸ Ñ‚Ñ€ÑÐ±Ð²Ð° Ð´Ð° Ð·Ð°Ð¿Ð¸ÑˆÐµÐ¼ Ñ‚ÐµÑ€Ð¼Ð¸Ð½Ð¸Ñ€Ð°Ñ‰Ð¸ ÑÐ¸Ð¼Ð²Ð¾Ð»
+        Ñ‰Ðµ Ð¸Ð¼Ð°Ð¼Ðµ Ð½Ð°Ð¹-Ð³Ð¾Ð»ÑÐ¼Ð° Ð´ÑŠÐ»Ð¶Ð¸Ð½Ð° Ð½Ð° Ð½Ð¸Ð·Ð° MAX_LEN - 1
     */
     cin.getline(inpt, MAX_LEN);
 
