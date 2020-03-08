@@ -3,4 +3,8 @@
 *.o
 
 Debug
-.vs
+*.sln
+*.vs
+*.vcxproj.user
+*.vcxproj
+*.vcxproj.filters
