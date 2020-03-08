@@ -7,6 +7,7 @@ class myString {
 public:
 	myString();
 	myString(char*);
+	~MyString();
 
 	void setStr(char*);
 	int cmp(char*);
