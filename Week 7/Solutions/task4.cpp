@@ -38,37 +38,46 @@ void printStack(std::stack<int>& st) {
 	std::cout << '\n';
 }
 
-/**
-	Функция, която изпълнява изискваната логика от задачата
 
-	@param[in] st стека, който ще сортираме в другите два
-	@paramp[in] odd, even референции към два стека, в които съответно ще сортираме
-*/
-void sortMod2(std::stack<int> st, std::stack<int>& odd, std::stack<int>& even) {
+std::stack<std::stack<int>> task4(std::stack<std::stack<int>> stst, int a, int b){
+    std::stack<std::stack<int>> res;
 
-	///Докато в подадения стек за сортирана има елементи
-	while (st.size() != 0) {
-		///Определяме в кой от двата стека ще слагаме най-горния елемент на st
-		if (st.top() % 2) {
-			odd.push(st.top()); ///Слагаме най-горната стойност от стека st в стека odd
-		}
-		else {
-			even.push(st.top()); ///Аналогично
-		}
+    ///Обхождаме елементно стека от стекове
+    while(!stst.empty()){
+        std::stack<int> temp = stst.top();  ///Запазваме си копие на горрния елемент на стека от стекове
+        int sum = 0;        ///Текущата сума елементите
 
-		st.pop(); ///Премахваме най-горния елемент на st
-	}
+        while(!temp.empty()){ ///Сумираме елементите на стека
+            sum+= temp.top();
+            temp.pop();
+        }
+
+		///Ако сумата удовлетворява условието пъхаме текущия стек в стека от стекове
+        if(sum>=a && sum<= b){
+            res.push(stst.top());
+        }
+
+        stst.pop(); ///Премахваме стека, който сме обработвали до сега, за да обработим и другите
+    }
+
+    return res;
 }
 
-int main() {
-	std::stack<int> input_stack, odd_stack, even_stack;
-	inputStack(input_stack);
+int main(){
 
-	sortMod2(input_stack, odd_stack, even_stack);
+    std::stack<std::stack<int>> stst;
 
-	std::cout << "Odd: ";
-	printStack(odd_stack);
+    for(int i = 0; i< 5; i++){
+        std::stack<int> inpt;
+        inputStack(inpt);
+        stst.push(inpt);
+    }
 
-	std::cout << "Even: ";
-	printStack(even_stack);
+    std::stack<std::stack<int>> res = task4(stst, 10, 50);
+
+    while(!res.empty()){
+        printStack(res.top());
+        res.pop();
+    }
+
 }

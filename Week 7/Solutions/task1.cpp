@@ -38,37 +38,31 @@ void printStack(std::stack<int>& st) {
 	std::cout << '\n';
 }
 
+
 /**
-	Функция, която изпълнява изискваната логика от задачата
+    Фунцкия, която обръща подаден стек в друг стек и  го връща
 
-	@param[in] st стека, който ще сортираме в другите два
-	@paramp[in] odd, even референции към два стека, в които съответно ще сортираме
+    @param[in] st Стека, който обръщаме
+
+    @returns res Обърнатия стек
 */
-void sortMod2(std::stack<int> st, std::stack<int>& odd, std::stack<int>& even) {
+std::stack<int> reverseStack(std::stack<int> st){
+    std::stack<int> res;    ///Създаваме си нов стек
 
-	///Докато в подадения стек за сортирана има елементи
-	while (st.size() != 0) {
-		///Определяме в кой от двата стека ще слагаме най-горния елемент на st
-		if (st.top() % 2) {
-			odd.push(st.top()); ///Слагаме най-горната стойност от стека st в стека odd
-		}
-		else {
-			even.push(st.top()); ///Аналогично
-		}
+    ///Обхождаме елементно подадения стек
+    while(!st.empty()){
+        ///Като сложим най-горния елемент на подадения стек
+        ///и го пъхнем в резултатния стек обръщаме подредбата
+        res.push(st.top());
+        st.pop();
+    }
 
-		st.pop(); ///Премахваме най-горния елемент на st
-	}
+    return res;
 }
 
-int main() {
-	std::stack<int> input_stack, odd_stack, even_stack;
-	inputStack(input_stack);
-
-	sortMod2(input_stack, odd_stack, even_stack);
-
-	std::cout << "Odd: ";
-	printStack(odd_stack);
-
-	std::cout << "Even: ";
-	printStack(even_stack);
+int main(){
+    std::stack<int> st, res;
+    inputStack(st);
+    res = reverseStack(st);
+    printStack(res);
 }
