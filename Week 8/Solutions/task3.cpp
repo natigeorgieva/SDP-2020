@@ -4,19 +4,19 @@
 
 
 /**
-	„U„…„~„{„ˆ„y„‘, „{„€„‘„„„€ „„‚„€„r„u„‚„‘„r„p „t„p„|„y „u„t„y„~ „ƒ„y„}„r„€„|„u„~ „~„y„x „ƒ„u
-	„ƒ„Œ„ƒ„„„€„y „ƒ„p„}„€ „€„„ „ˆ„y„†„‚„y
+	Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐ²Ð° Ð´Ð°Ð»Ð¸ ÐµÐ´Ð¸Ð½ ÑÐ¸Ð¼Ð²Ð¾Ð»ÐµÐ½ Ð½Ð¸Ð· ÑÐµ
+	ÑÑŠÑÑ‚Ð¾Ð¸ ÑÐ°Ð¼Ð¾ Ð¾Ñ‚ Ñ†Ð¸Ñ„Ñ€Ð¸
 
-	@param[in] s „B„‡„€„t„~„y„‘ „~„y„x
+	@param[in] s Ð’Ñ…Ð¾Ð´Ð½Ð¸Ñ Ð½Ð¸Ð·
 
-	@returns   „B„‚„Œ„‹„p true, „p„{„€ „u „y„x„„Œ„|„~„u„~„€ „…„ƒ„|„€„r„y„u„„„€, „r
-			   „„‚„€„„„y„r„u„~ „ƒ„|„…„‰„p„z false
+	@returns   Ð’Ñ€ÑŠÑ‰Ð° true, Ð°ÐºÐ¾ Ðµ Ð¸Ð·Ð¿ÑŠÐ»Ð½ÐµÐ½Ð¾ ÑƒÑÐ»Ð¾Ð²Ð¸ÐµÑ‚Ð¾, Ð²
+			   Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²ÐµÐ½ ÑÐ»ÑƒÑ‡Ð°Ð¹ false
 */
 bool isInteger(std::string s) {
-	bool state = true;		///„U„|„p„s, „ƒ „{„€„z„„„€ „€„x„~„p„‰„p„r„p„}„u „t„p„|„y „„„u„{„…„‹„y„‘ „~„y„x „ƒ„Œ„t„Œ„‚„w„p „ƒ„p„}„€ „ˆ„y„†„‚„y
+	bool state = true;		///Ð¤Ð»Ð°Ð³, Ñ ÐºÐ¾Ð¹Ñ‚Ð¾ Ð¾Ð·Ð½Ð°Ñ‡Ð°Ð²Ð°Ð¼Ðµ Ð´Ð°Ð»Ð¸ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ñ Ð½Ð¸Ð· ÑÑŠÐ´ÑŠÑ€Ð¶Ð° ÑÐ°Ð¼Ð¾ Ñ†Ð¸Ñ„Ñ€Ð¸
 
 	for (int i = 0; state && i < s.length(); i++) {
-		if (!isdigit(s[i])) {		///„@„{„€ „~„p„}„u„‚„y„} „ƒ„y„}„r„€„| „‚„p„x„|„y„‰„u„~ „€„„ „ˆ„y„†„‚„p „ƒ„r„p„|„‘„}„u „†„|„p„s„p
+		if (!isdigit(s[i])) {		///ÐÐºÐ¾ Ð½Ð°Ð¼ÐµÑ€Ð¸Ð¼ ÑÐ¸Ð¼Ð²Ð¾Ð» Ñ€Ð°Ð·Ð»Ð¸Ñ‡ÐµÐ½ Ð¾Ñ‚ Ñ†Ð¸Ñ„Ñ€Ð° ÑÐ²Ð°Ð»ÑÐ¼Ðµ Ñ„Ð»Ð°Ð³Ð°
 			state = false;
 		}
 	}
@@ -26,17 +26,17 @@ bool isInteger(std::string s) {
 
 
 /**
-	„U„…„~„{„ˆ„y„‘, „{„€„‘„„„€ „{„€„~„r„u„‚„„„y„‚„p „t„p„t„u„~ „ƒ„y„}„r„€„|„u„~ „~„y„x „r „ˆ„u„|„€„‰„y„ƒ„|„u„~„p „ƒ„„„€„z„~„€„ƒ„„
+	Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ ÐºÐ¾Ð½Ð²ÐµÑ€Ñ‚Ð¸Ñ€Ð° Ð´Ð°Ð´ÐµÐ½ ÑÐ¸Ð¼Ð²Ð¾Ð»ÐµÐ½ Ð½Ð¸Ð· Ð² Ñ†ÐµÐ»Ð¾Ñ‡Ð¸ÑÐ»ÐµÐ½Ð° ÑÑ‚Ð¾Ð¹Ð½Ð¾ÑÑ‚
 
-	@param[in] s „B„‡„€„t„~„y„‘ „~„y„x
+	@param[in] s Ð’Ñ…Ð¾Ð´Ð½Ð¸Ñ Ð½Ð¸Ð·
 
-	@returns   „B„‚„Œ„‹„p „‰„y„ƒ„|„€„„„€ „r „ƒ„y„}„r„€„|„~„y„‘ „~„y„x „{„p„„„€ „ˆ„u„|„€„‰„y„ƒ„|„u„~„p „t„p„~„~„p
+	@returns   Ð’Ñ€ÑŠÑ‰Ð° Ñ‡Ð¸ÑÐ»Ð¾Ñ‚Ð¾ Ð² ÑÐ¸Ð¼Ð²Ð¾Ð»Ð½Ð¸Ñ Ð½Ð¸Ð· ÐºÐ°Ñ‚Ð¾ Ñ†ÐµÐ»Ð¾Ñ‡Ð¸ÑÐ»ÐµÐ½Ð° Ð´Ð°Ð½Ð½Ð°
 */
 int toInteger(std::string s) {
-	int num = 0; ///„S„u„{„…„‹„€„„„€ „‰„y„ƒ„|„€
+	int num = 0; ///Ð¢ÐµÐºÑƒÑ‰Ð¾Ñ‚Ð¾ Ñ‡Ð¸ÑÐ»Ð¾
 
 	for (int i = 0; i < s.length(); i++) {
-		num = 10 * num + (s[i] - '0');	///„T„}„~„€„w„p„r„p„}„u „„„u„{„…„‹„€„„„€ „‰„y„ƒ„|„€ „ƒ 10 „y „s„€ „ƒ„Œ„q„y„‚„p„}„u „ƒ „„„u„{„…„‹„p„„„p „ˆ„y„†„‚„p
+		num = 10 * num + (s[i] - '0');	///Ð£Ð¼Ð½Ð¾Ð¶Ð°Ð²Ð°Ð¼Ðµ Ñ‚ÐµÐºÑƒÑ‰Ð¾Ñ‚Ð¾ Ñ‡Ð¸ÑÐ»Ð¾ Ñ 10 Ð¸ Ð³Ð¾ ÑÑŠÐ±Ð¸Ñ€Ð°Ð¼Ðµ Ñ Ñ‚ÐµÐºÑƒÑ‰Ð°Ñ‚Ð° Ñ†Ð¸Ñ„Ñ€Ð°
 	}
 
 	return num;
@@ -45,30 +45,30 @@ int toInteger(std::string s) {
 
 
 /**
-	„†„…„~„{„ˆ„y„‘, „{„€„‘„„„€ „r„Œ„r„u„w„t„p „r „‚„u„†„u„‚„y„‚„p„~„p „€„„p„Š„{„p „€„„ „ˆ„u„|„y „‰„y„ƒ„|„p,
-	„t„€„{„p„„„€ „~„u „ƒ„u „r„Œ„r„u„t„u „~„u„‹„€, „{„€„u„„„€ „~„u „u „ˆ„‘„|„€ „‰„y„ƒ„|„€
+	Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ Ð²ÑŠÐ²ÐµÐ¶Ð´Ð° Ð² Ñ€ÐµÑ„ÐµÑ€Ð¸Ñ€Ð°Ð½Ð° Ð¾Ð¿Ð°ÑˆÐºÐ° Ð¾Ñ‚ Ñ†ÐµÐ»Ð¸ Ñ‡Ð¸ÑÐ»Ð°,
+	Ð´Ð¾ÐºÐ°Ñ‚Ð¾ Ð½Ðµ ÑÐµ Ð²ÑŠÐ²ÐµÐ´Ðµ Ð½ÐµÑ‰Ð¾, ÐºÐ¾ÐµÑ‚Ð¾ Ð½Ðµ Ðµ Ñ†ÑÐ»Ð¾ Ñ‡Ð¸ÑÐ»Ð¾
 
-	@param[in, out] q „P„€„t„p„t„u„~„p „€„„p„Š„{„p, „r „{„€„‘„„„€ „„Œ„|„~„y„} „ˆ„u„|„y „‰„y„ƒ„|„p
+	@param[in, out] q ÐŸÐ¾Ð´Ð°Ð´ÐµÐ½Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°, Ð² ÐºÐ¾ÑÑ‚Ð¾ Ð¿ÑŠÐ»Ð½Ð¸Ð¼ Ñ†ÐµÐ»Ð¸ Ñ‡Ð¸ÑÐ»Ð°
 
 */
 void inputQueue(std::queue<int>& q) {
-	std::string input;  ///„N„y„x, „r „{„€„z„„„€ „„p„x„y„} „„„u„{„…„‹„y„‘ „r„‡„€„t „€„„ „{„|„p„r„y„p„„„…„‚„p„„„p
+	std::string input;  ///ÐÐ¸Ð·, Ð² ÐºÐ¾Ð¹Ñ‚Ð¾ Ð¿Ð°Ð·Ð¸Ð¼ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ñ Ð²Ñ…Ð¾Ð´ Ð¾Ñ‚ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ð°Ñ‚Ð°
 
 	while(1) {
-		std::cin >> input;		///„I„x„r„|„y„‰„p„}„u „€„„ „„€„„„€„{„p „~„y„x
+		std::cin >> input;		///Ð˜Ð·Ð²Ð»Ð¸Ñ‡Ð°Ð¼Ðµ Ð¾Ñ‚ Ð¿Ð¾Ñ‚Ð¾ÐºÐ° Ð½Ð¸Ð·
 
-		if (isInteger(input)) {			///„@„{„€ „y„x„r„|„u„‰„u„~„y„‘ „~„y„x „u „‰„y„ƒ„|„€
-			q.push(toInteger(input));   ///„P„‚„u„€„q„‚„p„x„…„r„p„}„u „s„€ „r „„„p„{„€„r„p „y „s„€ „ƒ„|„p„s„p„}„u „r „€„„p„Š„{„p„„„p
+		if (isInteger(input)) {			///ÐÐºÐ¾ Ð¸Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ñ Ð½Ð¸Ð· Ðµ Ñ‡Ð¸ÑÐ»Ð¾
+			q.push(toInteger(input));   ///ÐŸÑ€ÐµÐ¾Ð±Ñ€Ð°Ð·ÑƒÐ²Ð°Ð¼Ðµ Ð³Ð¾ Ð² Ñ‚Ð°ÐºÐ¾Ð²Ð° Ð¸ Ð³Ð¾ ÑÐ»Ð°Ð³Ð°Ð¼Ðµ Ð² Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð°
 		}
-		else {							///„B „„‚„€„„„y„r„u„~ „ƒ„|„…„‰„p„z „„„u„‚„}„y„~„y„‚„p„}„u „†„…„~„{„ˆ„y„‘„„„p
+		else {							///Ð’ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²ÐµÐ½ ÑÐ»ÑƒÑ‡Ð°Ð¹ Ñ‚ÐµÑ€Ð¼Ð¸Ð½Ð¸Ñ€Ð°Ð¼Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑÑ‚Ð°
 			return;
 		}
 	}
 }
 
 
-///„U„…„~„{„ˆ„y„‘ „„‚„y„~„„„y„‚„p„‹„p „€„„p„Š„{„p„~„p „u„{„‚„p„~„p. „H„p „„€-„„€„t„‚„€„q„~„€ „€„q„‘„ƒ„~„u„~„y„u „ƒ„u „{„€„~„ƒ„…„|„„„y„‚„p„z„„„u „ƒ
-///„‚„u„Š„u„~„y„„„u „„‚„y„}„u„‚„y „€„„ „„‚„u„t„y„Š„~„€„„„€ „…„„p„Š„~„u„~„y„u
+///Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð¿Ñ€Ð¸Ð½Ñ‚Ð¸Ñ€Ð°Ñ‰Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°Ð½Ð° ÐµÐºÑ€Ð°Ð½Ð°. Ð—Ð° Ð¿Ð¾-Ð¿Ð¾Ð´Ñ€Ð¾Ð±Ð½Ð¾ Ð¾Ð±ÑÑÐ½ÐµÐ½Ð¸Ðµ ÑÐµ ÐºÐ¾Ð½ÑÑƒÐ»Ñ‚Ð¸Ñ€Ð°Ð¹Ñ‚Ðµ Ñ
+///Ñ€ÐµÑˆÐµÐ½Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¸Ð¼ÐµÑ€Ð¸ Ð¾Ñ‚ Ð¿Ñ€ÐµÐ´Ð¸ÑˆÐ½Ð¾Ñ‚Ð¾ ÑƒÐ¿Ð°ÑˆÐ½ÐµÐ½Ð¸Ðµ
 void outputQueue(std::queue<int> q) {
 
 	while (!q.empty()) {
@@ -78,70 +78,70 @@ void outputQueue(std::queue<int> q) {
 }
 
 /**
-    „U„…„~„ˆ„{„y„‘, „{„€„‘„„„€ „„‚„€„r„u„‚„‘„r„p „t„p„|„y „u„|„u„}„u„~„„„y„„„u „r „€„„p„Š„{„p „ƒ„p „„€„t„‚„u„t„u„~„y „r
-    „‚„p„ƒ„„„‘„‹ „‚„u„t, „„.„u. „u„|„u„}„u„~„„„p, „{„€„z„„„€ „ƒ„u„t„y „~„p „‰„u„|„€ „~„p „€„„p„Š„{„p„„„p „u „„€-„}„p„|„Œ„{
-    „€„„ „r„ƒ„y„‰„{„y „€„ƒ„„„p„~„p„|„y
+    Ð¤ÑƒÐ½Ñ†ÐºÐ¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐ²Ð° Ð´Ð°Ð»Ð¸ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ‚Ðµ Ð² Ð¾Ð¿Ð°ÑˆÐºÐ° ÑÐ° Ð¿Ð¾Ð´Ñ€ÐµÐ´ÐµÐ½Ð¸ Ð²
+    Ñ€Ð°ÑÑ‚ÑÑ‰ Ñ€ÐµÐ´, Ñ‚.Ðµ. ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°, ÐºÐ¾Ð¹Ñ‚Ð¾ ÑÐµÐ´Ð¸ Ð½Ð° Ñ‡ÐµÐ»Ð¾ Ð½Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð° Ðµ Ð¿Ð¾-Ð¼Ð°Ð»ÑŠÐº
+    Ð¾Ñ‚ Ð²ÑÐ¸Ñ‡ÐºÐ¸ Ð¾ÑÑ‚Ð°Ð½Ð°Ð»Ð¸
 */
 bool isAscending(std::queue<int> q){
 
-    ///„D„€„{„p„„„€ „r „€„„p„Š„{„p„„„p „y„}„p „„€„~„u „t„r„p „u„|„u„}„u„~„„„p
+    ///Ð”Ð¾ÐºÐ°Ñ‚Ð¾ Ð² Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð° Ð¸Ð¼Ð° Ð¿Ð¾Ð½Ðµ Ð´Ð²Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°
     while(q.size()>=2){
-        int temp = q.front(); ///„H„p„„p„x„r„p„u„} „ƒ„„„€„z„~„€„ƒ„„„„„p „~„p „„‚„u„t„~„y„‘ „u„|„u„}„u„~„„
-        q.pop();              ///„y „s„€ „„‚„u„}„p„‡„r„p„}„u
+        int temp = q.front(); ///Ð—Ð°Ð¿Ð°Ð·Ð²Ð°ÐµÐ¼ ÑÑ‚Ð¾Ð¹Ð½Ð¾ÑÑ‚Ñ‚Ð° Ð½Ð° Ð¿Ñ€ÐµÐ´Ð½Ð¸Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚
+        q.pop();              ///Ð¸ Ð³Ð¾ Ð¿Ñ€ÐµÐ¼Ð°Ñ…Ð²Ð°Ð¼Ðµ
 
-        if(q.front() < temp){ ///„@„{„€ „„„u„{„…„‹„y„‘ „„‚„u„t„u„~ „u„|„u„}„u„~„„ „u „„€-„}„p„|„Œ„{ „€„„ „„‚„u„t„y„Š„~„y„‘ „„‚„u„t„u„~, „x„~„p„‰„y „~„u „u „r „~„p„‚„p„ƒ„„„r„p„‹ „‚„u„t
-            return false;     ///„R„|„u„t„€„r„p„„„u„|„~„€ „r„r„‚„Œ„‹„p„}„u false - „~„u „u „„€„t„‚„u„t„u„~„p
+        if(q.front() < temp){ ///ÐÐºÐ¾ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ñ Ð¿Ñ€ÐµÐ´ÐµÐ½ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ðµ Ð¿Ð¾-Ð¼Ð°Ð»ÑŠÐº Ð¾Ñ‚ Ð¿Ñ€ÐµÐ´Ð¸ÑˆÐ½Ð¸Ñ Ð¿Ñ€ÐµÐ´ÐµÐ½, Ð·Ð½Ð°Ñ‡Ð¸ Ð½Ðµ Ðµ Ð² Ð½Ð°Ñ€Ð°ÑÑ‚Ð²Ð°Ñ‰ Ñ€ÐµÐ´
+            return false;     ///Ð¡Ð»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»Ð½Ð¾ Ð²Ð²Ñ€ÑŠÑ‰Ð°Ð¼Ðµ false - Ð½Ðµ Ðµ Ð¿Ð¾Ð´Ñ€ÐµÐ´ÐµÐ½Ð°
         }
     }
 
-    return true; ///„@„{„€ „x„p „ˆ„‘„|„p„„„p „€„„p„Š„{„p „~„u „ƒ„}„u „~„p„}„u„‚„y„|„y „„‚„€„„„y„r„€„‚„u„‰„y„u „„„€ „„„‘ „u „„‚„€„t„‚„u„t„u„~„p „r „‚„p„ƒ„„„‘„‹ „‚„u„t „y „r„‚„Œ„‹„p„}„u true
+    return true; ///ÐÐºÐ¾ Ð·Ð° Ñ†ÑÐ»Ð°Ñ‚Ð° Ð¾Ð¿Ð°ÑˆÐºÐ° Ð½Ðµ ÑÐ¼Ðµ Ð½Ð°Ð¼ÐµÑ€Ð¸Ð»Ð¸ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð¾Ñ€ÐµÑ‡Ð¸Ðµ Ñ‚Ð¾ Ñ‚Ñ Ðµ Ð¿Ñ€Ð¾Ð´Ñ€ÐµÐ´ÐµÐ½Ð° Ð² Ñ€Ð°ÑÑ‚ÑÑ‰ Ñ€ÐµÐ´ Ð¸ Ð²Ñ€ÑŠÑ‰Ð°Ð¼Ðµ true
 
 }
 
 /**
-    „U„…„~„ˆ„{„y„‘, „{„€„‘„„„€ „„€ „„€„t„p„t„u„~„y „t„r„u „ƒ„€„‚„„„y„‚„p„~„y „€„„p„Š„{„y „r „‚„p„ƒ„„„‘„‹ „‚„u„t „r„‚„Œ„‹„p „„„‚„u„„„p „€„„p„Š„{„p,
-    „{„€„‘„„„€ „ƒ„Œ„‹„€ „u „ƒ„€„‚„„„y„‚„p„~„p „ƒ „u„|„u„}„u„~„„„y„„„u „~„p „„€„t„p„t„u„~„y„„„u „t„r„u.
+    Ð¤ÑƒÐ½Ñ†ÐºÐ¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ Ð¿Ð¾ Ð¿Ð¾Ð´Ð°Ð´ÐµÐ½Ð¸ Ð´Ð²Ðµ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð°Ð½Ð¸ Ð¾Ð¿Ð°ÑˆÐºÐ¸ Ð² Ñ€Ð°ÑÑ‚ÑÑ‰ Ñ€ÐµÐ´ Ð²Ñ€ÑŠÑ‰Ð° Ñ‚Ñ€ÐµÑ‚Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°,
+    ÐºÐ¾ÑÑ‚Ð¾ ÑÑŠÑ‰Ð¾ Ðµ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð°Ð½Ð° Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ‚Ðµ Ð½Ð° Ð¿Ð¾Ð´Ð°Ð´ÐµÐ½Ð¸Ñ‚Ðµ Ð´Ð²Ðµ.
 
-    @param[in] q1, q2 „D„r„u„„„u „„€„t„p„t„u„~„y „€„„p„Š„{„y
+    @param[in] q1, q2 Ð”Ð²ÐµÑ‚Ðµ Ð¿Ð¾Ð´Ð°Ð´ÐµÐ½Ð¸ Ð¾Ð¿Ð°ÑˆÐºÐ¸
 
-    @returns „O„„p„Š„{„p, „{„€„‘„„„€ „u „ƒ„€„‚„„„y„‚„p„~„p „ƒ „u„|„u„}„u„~„„„y„„„u „~„p q1 „y q2
+    @returns ÐžÐ¿Ð°ÑˆÐºÐ°, ÐºÐ¾ÑÑ‚Ð¾ Ðµ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð°Ð½Ð° Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ‚Ðµ Ð½Ð° q1 Ð¸ q2
 
-    @throws 1 „@„{„€ q1 „~„u „u „ƒ„€„‚„„„y„‚„p„~„p „‚„p„ƒ„„„‘„‹„€
-    @throws 2 „@„{„€ q2 „~„u „u „ƒ„€„‚„„„y„‚„p„~„p „‚„p„ƒ„„„‘„‹„€
+    @throws 1 ÐÐºÐ¾ q1 Ð½Ðµ Ðµ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð°Ð½Ð° Ñ€Ð°ÑÑ‚ÑÑ‰Ð¾
+    @throws 2 ÐÐºÐ¾ q2 Ð½Ðµ Ðµ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð°Ð½Ð° Ñ€Ð°ÑÑ‚ÑÑ‰Ð¾
 */
 std::queue<int> mergeQ(std::queue<int> q1, std::queue<int> q2){
 
-    ///„S„u„ƒ„„„€„r „q„|„€„{, „r „{„€„z„„„€ „„‚„€„r„u„‚„‘„r„p„}„u „t„p„|„y „r„‡„€„t„p „u „{„€„‚„u„{„„„u„~
+    ///Ð¢ÐµÑÑ‚Ð¾Ð² Ð±Ð»Ð¾Ðº, Ð² ÐºÐ¾Ð¹Ñ‚Ð¾ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐ²Ð°Ð¼Ðµ Ð´Ð°Ð»Ð¸ Ð²Ñ…Ð¾Ð´Ð° Ðµ ÐºÐ¾Ñ€ÐµÐºÑ‚ÐµÐ½
     try{
-        ///„@„{„€ „~„‘„{„€„‘ „€„„ „t„r„u„„„u „€„„p„Š„{„y „~„u „u „„€„t„‚„u„t„u„~„p „r„Œ„x„‡„€„t„‘„‹„€ „‡„r„Œ„‚„|„‘„}„u „s„‚„u„Š„{„p, „{„€„‘„„„€ „‹„u „‡„r„p„~„u„} „r catch „q„|„€„{„p
+        ///ÐÐºÐ¾ Ð½ÑÐºÐ¾Ñ Ð¾Ñ‚ Ð´Ð²ÐµÑ‚Ðµ Ð¾Ð¿Ð°ÑˆÐºÐ¸ Ð½Ðµ Ðµ Ð¿Ð¾Ð´Ñ€ÐµÐ´ÐµÐ½Ð° Ð²ÑŠÐ·Ñ…Ð¾Ð´ÑÑ‰Ð¾ Ñ…Ð²ÑŠÑ€Ð»ÑÐ¼Ðµ Ð³Ñ€ÐµÑˆÐºÐ°, ÐºÐ¾ÑÑ‚Ð¾ Ñ‰Ðµ Ñ…Ð²Ð°Ð½ÐµÐ¼ Ð² catch Ð±Ð»Ð¾ÐºÐ°
         if(!isAscending(q1))
         throw 1;
         if(!isAscending(q2))
         throw 2;
     }catch(int err){
-        ///„@„{„€ „y„}„p „‡„r„Œ„‚„|„u„~„p „s„‚„u„Š„{„p „y„x„„y„ƒ„r„p„}„u „~„p „u„{„‚„p„~„p
+        ///ÐÐºÐ¾ Ð¸Ð¼Ð° Ñ…Ð²ÑŠÑ€Ð»ÐµÐ½Ð° Ð³Ñ€ÐµÑˆÐºÐ° Ð¸Ð·Ð¿Ð¸ÑÐ²Ð°Ð¼Ðµ Ð½Ð° ÐµÐºÑ€Ð°Ð½Ð°
         std::cout<<(err == 1 ? "First": "Second")<<" queue is not sorted!";
-        throw; /// „P„‚„u„t„p„r„p„}„u „{„€„t„p „~„p „s„‚„u„Š„{„p„„„p „~„p „r„y„{„p„‹„p„„„p „†„…„~„{„ˆ„y„‘
+        throw; /// ÐŸÑ€ÐµÐ´Ð°Ð²Ð°Ð¼Ðµ ÐºÐ¾Ð´Ð° Ð½Ð° Ð³Ñ€ÐµÑˆÐºÐ°Ñ‚Ð° Ð½Ð° Ð²Ð¸ÐºÐ°Ñ‰Ð°Ñ‚Ð° Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ
     }
 
     std::queue<int> result;
 
-    ///„D„€„{„p„„„€ „y „r „t„r„u„„„u „€„„p„Š„p„{„y „y„}„p „u„|„u„}„u„~„„„y
+    ///Ð”Ð¾ÐºÐ°Ñ‚Ð¾ Ð¸ Ð² Ð´Ð²ÐµÑ‚Ðµ Ð¾Ð¿Ð°ÑˆÐ°ÐºÐ¸ Ð¸Ð¼Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸
     while(!q1.empty()&&!q2.empty()){
-        ///„@„{„€ „„‚„u„t„~„y„‘ „u„|„u„}„u„~„„ „r q2 „u „„€-„}„p„|„Œ„{ „€„„ „„‚„u„t„~„y„‘ „u„|„u„}„u„~„„ „r q1
+        ///ÐÐºÐ¾ Ð¿Ñ€ÐµÐ´Ð½Ð¸Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² q2 Ðµ Ð¿Ð¾-Ð¼Ð°Ð»ÑŠÐº Ð¾Ñ‚ Ð¿Ñ€ÐµÐ´Ð½Ð¸Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² q1
         if(q1.front() > q2.front()){
-            result.push(q2.front()); ///„P„Œ„‡„p„}„u „„‚„u„t„~„y„‘ „u„|„u„}„u„~„„ „~„p q2 „r „‚„u„x„…„|„„„p„„„~„p„„„p „€„„p„Š„{„p
-            q2.pop();                ///„P„‚„u„}„p„‡„r„p„}„u „u„|„u„}„u„~„„„p „€„„ q2
+            result.push(q2.front()); ///ÐŸÑŠÑ…Ð°Ð¼Ðµ Ð¿Ñ€ÐµÐ´Ð½Ð¸Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð½Ð° q2 Ð² Ñ€ÐµÐ·ÑƒÐ»Ñ‚Ð°Ñ‚Ð½Ð°Ñ‚Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°
+            q2.pop();                ///ÐŸÑ€ÐµÐ¼Ð°Ñ…Ð²Ð°Ð¼Ðµ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð¾Ñ‚ q2
         }
-        ///„B „„‚„€„„„y„r„u„~ „ƒ„|„…„‰„p„z „„‚„p„r„y„} „s„€„‚„~„y„„„u „ƒ„„„Œ„„{„y „x„p q1
+        ///Ð’ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²ÐµÐ½ ÑÐ»ÑƒÑ‡Ð°Ð¹ Ð¿Ñ€Ð°Ð²Ð¸Ð¼ Ð³Ð¾Ñ€Ð½Ð¸Ñ‚Ðµ ÑÑ‚ÑŠÐ¿ÐºÐ¸ Ð·Ð° q1
         else{
             result.push(q1.front());
             q1.pop();
         }
     }
 
-    ///„R„u„s„p „p„{„€ „~„‘„{„€„‘ „€„„ „t„r„u„„„u „€„„p„Š„{„y „y„}„p „u„|„u„}„u„~„„„y, „‹„u „ƒ„u „y„x„„Œ„|„~„y
-    ///„ƒ„Œ„€„„„r„u„„„~„y„‘ „ˆ„y„{„Œ„| „y „Š„u „„Œ„‡„~„u „€„ƒ„„„p„~„p„|„y„„„u „u„|„u„}„u„~„„„y „r „‚„u„x„…„|„„„p„„„~„p„„„p „€„„p„Š„{„p
+    ///Ð¡ÐµÐ³Ð° Ð°ÐºÐ¾ Ð½ÑÐºÐ¾Ñ Ð¾Ñ‚ Ð´Ð²ÐµÑ‚Ðµ Ð¾Ð¿Ð°ÑˆÐºÐ¸ Ð¸Ð¼Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸, Ñ‰Ðµ ÑÐµ Ð¸Ð·Ð¿ÑŠÐ»Ð½Ð¸
+    ///ÑÑŠÐ¾Ñ‚Ð²ÐµÑ‚Ð½Ð¸Ñ Ñ†Ð¸ÐºÑŠÐ» Ð¸ ÑˆÐµ Ð¿ÑŠÑ…Ð½Ðµ Ð¾ÑÑ‚Ð°Ð½Ð°Ð»Ð¸Ñ‚Ðµ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸ Ð² Ñ€ÐµÐ·ÑƒÐ»Ñ‚Ð°Ñ‚Ð½Ð°Ñ‚Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°
     while(!q1.empty()){
         result.push(q1.front());
         q1.pop();

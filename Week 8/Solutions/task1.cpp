@@ -4,19 +4,19 @@
 #include <stack>
 
 /**
-	„U„…„~„{„ˆ„y„‘, „{„€„‘„„„€ „„‚„€„r„u„‚„‘„r„p „t„p„|„y „u„t„y„~ „ƒ„y„}„r„€„|„u„~ „~„y„x „ƒ„u
-	„ƒ„Œ„ƒ„„„€„y „ƒ„p„}„€ „€„„ „ˆ„y„†„‚„y
+	Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐ²Ð° Ð´Ð°Ð»Ð¸ ÐµÐ´Ð¸Ð½ ÑÐ¸Ð¼Ð²Ð¾Ð»ÐµÐ½ Ð½Ð¸Ð· ÑÐµ
+	ÑÑŠÑÑ‚Ð¾Ð¸ ÑÐ°Ð¼Ð¾ Ð¾Ñ‚ Ñ†Ð¸Ñ„Ñ€Ð¸
 
-	@param[in] s „B„‡„€„t„~„y„‘ „~„y„x
+	@param[in] s Ð’Ñ…Ð¾Ð´Ð½Ð¸Ñ Ð½Ð¸Ð·
 
-	@returns   „B„‚„Œ„‹„p true, „p„{„€ „u „y„x„„Œ„|„~„u„~„€ „…„ƒ„|„€„r„y„u„„„€, „r
-			   „„‚„€„„„y„r„u„~ „ƒ„|„…„‰„p„z false
+	@returns   Ð’Ñ€ÑŠÑ‰Ð° true, Ð°ÐºÐ¾ Ðµ Ð¸Ð·Ð¿ÑŠÐ»Ð½ÐµÐ½Ð¾ ÑƒÑÐ»Ð¾Ð²Ð¸ÐµÑ‚Ð¾, Ð²
+			   Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²ÐµÐ½ ÑÐ»ÑƒÑ‡Ð°Ð¹ false
 */
 bool isInteger(std::string s) {
-	bool state = true;		///„U„|„p„s, „ƒ „{„€„z„„„€ „€„x„~„p„‰„p„r„p„}„u „t„p„|„y „„„u„{„…„‹„y„‘ „~„y„x „ƒ„Œ„t„Œ„‚„w„p „ƒ„p„}„€ „ˆ„y„†„‚„y
+	bool state = true;		///Ð¤Ð»Ð°Ð³, Ñ ÐºÐ¾Ð¹Ñ‚Ð¾ Ð¾Ð·Ð½Ð°Ñ‡Ð°Ð²Ð°Ð¼Ðµ Ð´Ð°Ð»Ð¸ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ñ Ð½Ð¸Ð· ÑÑŠÐ´ÑŠÑ€Ð¶Ð° ÑÐ°Ð¼Ð¾ Ñ†Ð¸Ñ„Ñ€Ð¸
 
 	for (int i = 0; state && i < s.length(); i++) {
-		if (!isdigit(s[i])) {		///„@„{„€ „~„p„}„u„‚„y„} „ƒ„y„}„r„€„| „‚„p„x„|„y„‰„u„~ „€„„ „ˆ„y„†„‚„p „ƒ„r„p„|„‘„}„u „†„|„p„s„p
+		if (!isdigit(s[i])) {		///ÐÐºÐ¾ Ð½Ð°Ð¼ÐµÑ€Ð¸Ð¼ ÑÐ¸Ð¼Ð²Ð¾Ð» Ñ€Ð°Ð·Ð»Ð¸Ñ‡ÐµÐ½ Ð¾Ñ‚ Ñ†Ð¸Ñ„Ñ€Ð° ÑÐ²Ð°Ð»ÑÐ¼Ðµ Ñ„Ð»Ð°Ð³Ð°
 			state = false;
 		}
 	}
@@ -26,17 +26,17 @@ bool isInteger(std::string s) {
 
 
 /**
-	„U„…„~„{„ˆ„y„‘, „{„€„‘„„„€ „{„€„~„r„u„‚„„„y„‚„p „t„p„t„u„~ „ƒ„y„}„r„€„|„u„~ „~„y„x „r „ˆ„u„|„€„‰„y„ƒ„|„u„~„p „ƒ„„„€„z„~„€„ƒ„„
+	Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ ÐºÐ¾Ð½Ð²ÐµÑ€Ñ‚Ð¸Ñ€Ð° Ð´Ð°Ð´ÐµÐ½ ÑÐ¸Ð¼Ð²Ð¾Ð»ÐµÐ½ Ð½Ð¸Ð· Ð² Ñ†ÐµÐ»Ð¾Ñ‡Ð¸ÑÐ»ÐµÐ½Ð° ÑÑ‚Ð¾Ð¹Ð½Ð¾ÑÑ‚
 
-	@param[in] s „B„‡„€„t„~„y„‘ „~„y„x
+	@param[in] s Ð’Ñ…Ð¾Ð´Ð½Ð¸Ñ Ð½Ð¸Ð·
 
-	@returns   „B„‚„Œ„‹„p „‰„y„ƒ„|„€„„„€ „r „ƒ„y„}„r„€„|„~„y„‘ „~„y„x „{„p„„„€ „ˆ„u„|„€„‰„y„ƒ„|„u„~„p „t„p„~„~„p
+	@returns   Ð’Ñ€ÑŠÑ‰Ð° Ñ‡Ð¸ÑÐ»Ð¾Ñ‚Ð¾ Ð² ÑÐ¸Ð¼Ð²Ð¾Ð»Ð½Ð¸Ñ Ð½Ð¸Ð· ÐºÐ°Ñ‚Ð¾ Ñ†ÐµÐ»Ð¾Ñ‡Ð¸ÑÐ»ÐµÐ½Ð° Ð´Ð°Ð½Ð½Ð°
 */
 int toInteger(std::string s) {
-	int num = 0; ///„S„u„{„…„‹„€„„„€ „‰„y„ƒ„|„€
+	int num = 0; ///Ð¢ÐµÐºÑƒÑ‰Ð¾Ñ‚Ð¾ Ñ‡Ð¸ÑÐ»Ð¾
 
 	for (int i = 0; i < s.length(); i++) {
-		num = 10 * num + (s[i] - '0');	///„T„}„~„€„w„p„r„p„}„u „„„u„{„…„‹„€„„„€ „‰„y„ƒ„|„€ „ƒ 10 „y „s„€ „ƒ„Œ„q„y„‚„p„}„u „ƒ „„„u„{„…„‹„p„„„p „ˆ„y„†„‚„p
+		num = 10 * num + (s[i] - '0');	///Ð£Ð¼Ð½Ð¾Ð¶Ð°Ð²Ð°Ð¼Ðµ Ñ‚ÐµÐºÑƒÑ‰Ð¾Ñ‚Ð¾ Ñ‡Ð¸ÑÐ»Ð¾ Ñ 10 Ð¸ Ð³Ð¾ ÑÑŠÐ±Ð¸Ñ€Ð°Ð¼Ðµ Ñ Ñ‚ÐµÐºÑƒÑ‰Ð°Ñ‚Ð° Ñ†Ð¸Ñ„Ñ€Ð°
 	}
 
 	return num;
@@ -45,30 +45,30 @@ int toInteger(std::string s) {
 
 
 /**
-	„†„…„~„{„ˆ„y„‘, „{„€„‘„„„€ „r„Œ„r„u„w„t„p „r „‚„u„†„u„‚„y„‚„p„~„p „€„„p„Š„{„p „€„„ „ˆ„u„|„y „‰„y„ƒ„|„p,
-	„t„€„{„p„„„€ „~„u „ƒ„u „r„Œ„r„u„t„u „~„u„‹„€, „{„€„u„„„€ „~„u „u „ˆ„‘„|„€ „‰„y„ƒ„|„€
+	Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ Ð²ÑŠÐ²ÐµÐ¶Ð´Ð° Ð² Ñ€ÐµÑ„ÐµÑ€Ð¸Ñ€Ð°Ð½Ð° Ð¾Ð¿Ð°ÑˆÐºÐ° Ð¾Ñ‚ Ñ†ÐµÐ»Ð¸ Ñ‡Ð¸ÑÐ»Ð°,
+	Ð´Ð¾ÐºÐ°Ñ‚Ð¾ Ð½Ðµ ÑÐµ Ð²ÑŠÐ²ÐµÐ´Ðµ Ð½ÐµÑ‰Ð¾, ÐºÐ¾ÐµÑ‚Ð¾ Ð½Ðµ Ðµ Ñ†ÑÐ»Ð¾ Ñ‡Ð¸ÑÐ»Ð¾
 
-	@param[in, out] q „P„€„t„p„t„u„~„p „€„„p„Š„{„p, „r „{„€„‘„„„€ „„Œ„|„~„y„} „ˆ„u„|„y „‰„y„ƒ„|„p
+	@param[in, out] q ÐŸÐ¾Ð´Ð°Ð´ÐµÐ½Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°, Ð² ÐºÐ¾ÑÑ‚Ð¾ Ð¿ÑŠÐ»Ð½Ð¸Ð¼ Ñ†ÐµÐ»Ð¸ Ñ‡Ð¸ÑÐ»Ð°
 
 */
 void inputQueue(std::queue<int>& q) {
-	std::string input;  ///„N„y„x, „r „{„€„z„„„€ „„p„x„y„} „„„u„{„…„‹„y„‘ „r„‡„€„t „€„„ „{„|„p„r„y„p„„„…„‚„p„„„p
+	std::string input;  ///ÐÐ¸Ð·, Ð² ÐºÐ¾Ð¹Ñ‚Ð¾ Ð¿Ð°Ð·Ð¸Ð¼ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ñ Ð²Ñ…Ð¾Ð´ Ð¾Ñ‚ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ð°Ñ‚Ð°
 
 	while(1) {
-		std::cin >> input;		///„I„x„r„|„y„‰„p„}„u „€„„ „„€„„„€„{„p „~„y„x
+		std::cin >> input;		///Ð˜Ð·Ð²Ð»Ð¸Ñ‡Ð°Ð¼Ðµ Ð¾Ñ‚ Ð¿Ð¾Ñ‚Ð¾ÐºÐ° Ð½Ð¸Ð·
 
-		if (isInteger(input)) {			///„@„{„€ „y„x„r„|„u„‰„u„~„y„‘ „~„y„x „u „‰„y„ƒ„|„€
-			q.push(toInteger(input));   ///„P„‚„u„€„q„‚„p„x„…„r„p„}„u „s„€ „r „„„p„{„€„r„p „y „s„€ „ƒ„|„p„s„p„}„u „r „€„„p„Š„{„p„„„p
+		if (isInteger(input)) {			///ÐÐºÐ¾ Ð¸Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ñ Ð½Ð¸Ð· Ðµ Ñ‡Ð¸ÑÐ»Ð¾
+			q.push(toInteger(input));   ///ÐŸÑ€ÐµÐ¾Ð±Ñ€Ð°Ð·ÑƒÐ²Ð°Ð¼Ðµ Ð³Ð¾ Ð² Ñ‚Ð°ÐºÐ¾Ð²Ð° Ð¸ Ð³Ð¾ ÑÐ»Ð°Ð³Ð°Ð¼Ðµ Ð² Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð°
 		}
-		else {							///„B „„‚„€„„„y„r„u„~ „ƒ„|„…„‰„p„z „„„u„‚„}„y„~„y„‚„p„}„u „†„…„~„{„ˆ„y„‘„„„p
+		else {							///Ð’ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²ÐµÐ½ ÑÐ»ÑƒÑ‡Ð°Ð¹ Ñ‚ÐµÑ€Ð¼Ð¸Ð½Ð¸Ñ€Ð°Ð¼Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑÑ‚Ð°
 			return;
 		}
 	}
 }
 
 
-///„U„…„~„{„ˆ„y„‘ „„‚„y„~„„„y„‚„p„‹„p „€„„p„Š„{„p„~„p „u„{„‚„p„~„p. „H„p „„€-„„€„t„‚„€„q„~„€ „€„q„‘„ƒ„~„u„~„y„u „ƒ„u „{„€„~„ƒ„…„|„„„y„‚„p„z„„„u „ƒ
-///„‚„u„Š„u„~„y„„„u „„‚„y„}„u„‚„y „€„„ „„‚„u„t„y„Š„~„€„„„€ „…„„p„Š„~„u„~„y„u
+///Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð¿Ñ€Ð¸Ð½Ñ‚Ð¸Ñ€Ð°Ñ‰Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°Ð½Ð° ÐµÐºÑ€Ð°Ð½Ð°. Ð—Ð° Ð¿Ð¾-Ð¿Ð¾Ð´Ñ€Ð¾Ð±Ð½Ð¾ Ð¾Ð±ÑÑÐ½ÐµÐ½Ð¸Ðµ ÑÐµ ÐºÐ¾Ð½ÑÑƒÐ»Ñ‚Ð¸Ñ€Ð°Ð¹Ñ‚Ðµ Ñ
+///Ñ€ÐµÑˆÐµÐ½Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¸Ð¼ÐµÑ€Ð¸ Ð¾Ñ‚ Ð¿Ñ€ÐµÐ´Ð¸ÑˆÐ½Ð¾Ñ‚Ð¾ ÑƒÐ¿Ð°ÑˆÐ½ÐµÐ½Ð¸Ðµ
 void outputQueue(std::queue<int> q) {
 
 	while (!q.empty()) {
@@ -79,40 +79,40 @@ void outputQueue(std::queue<int> q) {
 
 
 /**
-    „U„…„~„{„ˆ„y„‘, „{„€„‘„„„€ „„‚„€„r„u„‚„‘„r„p „t„p„|„y „u„|„u„}„u„~„„„y„„„u „~„p
-    „„€„t„p„t„u„~„p„„„p „€„„p„Š„{„p „€„q„‚„p„x„…„r„p„„ „„p„|„y„~„t„‚„€„}. „@„|„s„€„‚„y„„„Œ„}„p „u „‚„u„p„|„y„x„y„‚„p„~
-    „ƒ „„€„}„€„‹„u„~ „ƒ„„„u„{ „y „€„„p„Š„{„p. „D„€„{„p„„„€ „r „„€„t„p„t„u„~„p„„„p „€„„p„Š„{„p „y„}„p „u„|„u„}„u„~„„„y
-    „„Œ„‡„p„}„u „„Œ„‚„r„y„‘ „u„|„u„}„u„~„„ „r „ƒ„„„u„{„p („„„p„{„p „€„q„‚„Œ„‹„p„}„u „„€„t„‚„u„t„q„p„„„p „~„p „u„|„u„}„u„~„„„y„„„u „r „€„„p„Š„{„p„„„p)
-    „y „r „€„„p„Š„{„p„„„p („„„p„{„p „x„p„„p„x„r„p„}„u „€„‚„y„s„y„~„p„|„~„p„„„p „„€„t„‚„u„t„q„p). „R„u„s„p „p„{„€ „€„„p„Š„{„p„„„p „u „€„q„‚„p„x„…„r„p„|„p
-    „„p„|„y„~„t„€„} „„„€ „r„ƒ„u„{„y „t„r„p „„€„‚„u„t„~„y „u„|„u„}„u„~„„„p „r „t„r„u„„„u „„€„}„€„‹„~„y „ƒ„„„‚„…„{„„„…„‚„y „„„‚„‘„q„r„p „t„p „ƒ„y „ƒ„Œ„„p„t„p„„.
+    Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ, ÐºÐ¾ÑÑ‚Ð¾ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐ²Ð° Ð´Ð°Ð»Ð¸ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ‚Ðµ Ð½Ð°
+    Ð¿Ð¾Ð´Ð°Ð´ÐµÐ½Ð°Ñ‚Ð° Ð¾Ð¿Ð°ÑˆÐºÐ° Ð¾Ð±Ñ€Ð°Ð·ÑƒÐ²Ð°Ñ‚ Ð¿Ð°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼. ÐÐ»Ð³Ð¾Ñ€Ð¸Ñ‚ÑŠÐ¼Ð° Ðµ Ñ€ÐµÐ°Ð»Ð¸Ð·Ð¸Ñ€Ð°Ð½
+    Ñ Ð¿Ð¾Ð¼Ð¾Ñ‰ÐµÐ½ ÑÑ‚ÐµÐº Ð¸ Ð¾Ð¿Ð°ÑˆÐºÐ°. Ð”Ð¾ÐºÐ°Ñ‚Ð¾ Ð² Ð¿Ð¾Ð´Ð°Ð´ÐµÐ½Ð°Ñ‚Ð° Ð¾Ð¿Ð°ÑˆÐºÐ° Ð¸Ð¼Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸
+    Ð¿ÑŠÑ…Ð°Ð¼Ðµ Ð¿ÑŠÑ€Ð²Ð¸Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² ÑÑ‚ÐµÐºÐ° (Ñ‚Ð°ÐºÐ° Ð¾Ð±Ñ€ÑŠÑ‰Ð°Ð¼Ðµ Ð¿Ð¾Ð´Ñ€ÐµÐ´Ð±Ð°Ñ‚Ð° Ð½Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ‚Ðµ Ð² Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð°)
+    Ð¸ Ð² Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð° (Ñ‚Ð°ÐºÐ° Ð·Ð°Ð¿Ð°Ð·Ð²Ð°Ð¼Ðµ Ð¾Ñ€Ð¸Ð³Ð¸Ð½Ð°Ð»Ð½Ð°Ñ‚Ð° Ð¿Ð¾Ð´Ñ€ÐµÐ´Ð±Ð°). Ð¡ÐµÐ³Ð° Ð°ÐºÐ¾ Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð° Ðµ Ð¾Ð±Ñ€Ð°Ð·ÑƒÐ²Ð°Ð»Ð°
+    Ð¿Ð°Ð»Ð¸Ð½Ð´Ð¾Ð¼ Ñ‚Ð¾ Ð²ÑÐµÐºÐ¸ Ð´Ð²Ð° Ð¿Ð¾Ñ€ÐµÐ´Ð½Ð¸ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² Ð´Ð²ÐµÑ‚Ðµ Ð¿Ð¾Ð¼Ð¾Ñ‰Ð½Ð¸ ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ð¸ Ñ‚Ñ€ÑÐ±Ð²Ð° Ð´Ð° ÑÐ¸ ÑÑŠÐ¿Ð°Ð´Ð°Ñ‚.
 
-    @param[in] q „O„„p„Š„{„p„„„p, „‰„y„y„„„€ „u„|„u„}„u„~„„„y „‹„u „„‚„€„r„u„‚„‘„r„p„}„u
+    @param[in] q ÐžÐ¿Ð°ÑˆÐºÐ°Ñ‚Ð°, Ñ‡Ð¸Ð¸Ñ‚Ð¾ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸ Ñ‰Ðµ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐ²Ð°Ð¼Ðµ
 
-    @returns true - „p„{„€ „€„q„‚„x„…„r„p„„  „„p„|„y„~„t„‚„€„}
-             false - „r „„‚„€„„„y„r„u„~ „ƒ„|„…„‰„p„z
+    @returns true - Ð°ÐºÐ¾ Ð¾Ð±Ñ€Ð·ÑƒÐ²Ð°Ñ‚  Ð¿Ð°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼
+             false - Ð² Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²ÐµÐ½ ÑÐ»ÑƒÑ‡Ð°Ð¹
 
 */
 bool isPalindrome(std::queue<int> q){
-    std::stack<int> tempSt; ///„P„€„}„€„‹„u„~ „ƒ„„„u„{, „r „{„€„z„„„€ „‹„u „€„q„Œ„‚„~„u„} „u„|„u„}„u„~„„„y„„„u „€„„ „€„„p„Š„{„p„„„p
-    std::queue<int> tempQ;  ///„N„€„r„p „€„„p„Š„{„p, „{„Œ„t„u„„„€ „‹„u „„p„x„y„} „u„|„u„}„u„~„„„y„„„u „~„p „„€„t„p„t„u„~„p„„„p
+    std::stack<int> tempSt; ///ÐŸÐ¾Ð¼Ð¾Ñ‰ÐµÐ½ ÑÑ‚ÐµÐº, Ð² ÐºÐ¾Ð¹Ñ‚Ð¾ Ñ‰Ðµ Ð¾Ð±ÑŠÑ€Ð½ÐµÐ¼ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ‚Ðµ Ð¾Ñ‚ Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð°
+    std::queue<int> tempQ;  ///ÐÐ¾Ð²Ð° Ð¾Ð¿Ð°ÑˆÐºÐ°, ÐºÑŠÐ´ÐµÑ‚Ð¾ Ñ‰Ðµ Ð¿Ð°Ð·Ð¸Ð¼ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ‚Ðµ Ð½Ð° Ð¿Ð¾Ð´Ð°Ð´ÐµÐ½Ð°Ñ‚Ð°
 
-    ///„D„€„{„p„„„€ „y„}„p „u„|„u„}„u„~„„„y „r „€„„p„Š„{„p„„„p
+    ///Ð”Ð¾ÐºÐ°Ñ‚Ð¾ Ð¸Ð¼Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸ Ð² Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð°
     while(!q.empty()){
-        ///„P„Œ„‡„p„}„u „„‚„u„t„~„y„‘ „u„|„u„}„u„~„„ „~„p „€„„p„Š„p„{„„„p „r „„€„}„€„‹„~„y„„„u „ƒ„„„u„{ „y „€„„p„Š„{„p
+        ///ÐŸÑŠÑ…Ð°Ð¼Ðµ Ð¿Ñ€ÐµÐ´Ð½Ð¸Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð½Ð° Ð¾Ð¿Ð°ÑˆÐ°ÐºÑ‚Ð° Ð² Ð¿Ð¾Ð¼Ð¾Ñ‰Ð½Ð¸Ñ‚Ðµ ÑÑ‚ÐµÐº Ð¸ Ð¾Ð¿Ð°ÑˆÐºÐ°
         tempSt.push(q.front());
         tempQ.push(q.front());
 
-        q.pop(); ///„„‚„u„}„p„Š„‡„r„p„}„u „„‚„u„t„~„y„‘ „u„|„u„}„u„~„„
+        q.pop(); ///Ð¿Ñ€ÐµÐ¼Ð°ÑˆÑ…Ð²Ð°Ð¼Ðµ Ð¿Ñ€ÐµÐ´Ð½Ð¸Ñ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚
     }
 
-    ///„D„€„{„p„„„€ „y„}„p „u„|„u„}„u„~„„„y „r „„€„}„€„‹„~„y„‘ „ƒ„„„u„{
+    ///Ð”Ð¾ÐºÐ°Ñ‚Ð¾ Ð¸Ð¼Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸ Ð² Ð¿Ð¾Ð¼Ð¾Ñ‰Ð½Ð¸Ñ ÑÑ‚ÐµÐº
     while(!tempSt.empty()){
-        ///„@„{„€ „t„r„p „„„u„{„…„‹„y „u„|„u„}„u„~„„„y „r „„€„}„€„‹„~„y„„„u „ƒ„„„‚„…„{„„„…„‚„y „ƒ„u „‚„p„x„}„y„~„p„r„p„„ „„„€ „€„„p„Š„{„p„„„p „~„u „u „€„q„‚„p„x„…„r„p„|„p „„p„|„y„~„t„‚„€„}
+        ///ÐÐºÐ¾ Ð´Ð²Ð° Ñ‚ÐµÐºÑƒÑ‰Ð¸ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸ Ð² Ð¿Ð¾Ð¼Ð¾Ñ‰Ð½Ð¸Ñ‚Ðµ ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ð¸ ÑÐµ Ñ€Ð°Ð·Ð¼Ð¸Ð½Ð°Ð²Ð°Ñ‚ Ñ‚Ð¾ Ð¾Ð¿Ð°ÑˆÐºÐ°Ñ‚Ð° Ð½Ðµ Ðµ Ð¾Ð±Ñ€Ð°Ð·ÑƒÐ²Ð°Ð»Ð° Ð¿Ð°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼
         if(tempSt.top() != tempQ.front()){
             return false;
         }
 
-        ///„P„‚„u„}„p„‡„r„p„}„u „ƒ„y „„Œ„‚„r„y„„„u „t„r„p „u„|„u„}„u„~„„„p „x„p „„€„}„€„‹„~„y„„„u „ƒ„„„‚„…„{„„„…„‚„y, „x„p „t„p „t„€„ƒ„„„Œ„„y„} „ƒ„|„u„t„r„p„‹„y„„„u „u„|„u„}„u„~„„„y
+        ///ÐŸÑ€ÐµÐ¼Ð°Ñ…Ð²Ð°Ð¼Ðµ ÑÐ¸ Ð¿ÑŠÑ€Ð²Ð¸Ñ‚Ðµ Ð´Ð²Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð·Ð° Ð¿Ð¾Ð¼Ð¾Ñ‰Ð½Ð¸Ñ‚Ðµ ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ð¸, Ð·Ð° Ð´Ð° Ð´Ð¾ÑÑ‚ÑŠÐ¿Ð¸Ð¼ ÑÐ»ÐµÐ´Ð²Ð°Ñ‰Ð¸Ñ‚Ðµ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸
         tempSt.pop();
         tempQ.pop();
     }
