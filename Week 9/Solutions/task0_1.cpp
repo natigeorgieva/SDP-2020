@@ -95,28 +95,40 @@ void inputList(std::list<int>& l) {
 	започвайки от началото.
 */
 void printFlist(flist<int> l) {
-	flist<int>::iterator i = l.begin();
+	flist<int>::iterator i = l.begin(); ///Създаваме итератор, с който обхождаме списъка
 
+	///Докато итератора не стигне до края на списъка
 	while (i != l.end()) {
-		std::cout << *i << " ";
-		i++;
+		std::cout << *i << " ";///Принтираме стойността на клетката
+		i++;                   ///Преместваме итератора на следващата клетка
 	}
 	std::cout << std::endl;
 }
 
+/**
+    Рекурсивна функция, която принтира свързан списък с една връзка в
+    обратна посока.
+*/
 void iterateBackFlist(flist<int>& l, flist<int>::iterator i) {
+	///Дъното е достигнато, когоато итератора стигне края на списъка
 	if (i == l.end()) {
 		return;
 	}
 
+	///Запазваме стойността на текущата клетка
 	int val = *i;
 
-	i++;
-	iterateBackFlist(l, i);
+	i++;                        ///Преместваме итератора на следващата клетка
+	iterateBackFlist(l, i);     ///Извикваме същата функция
 
-	std::cout << val << " ";
+	std::cout << val << " ";    ///Когато се връщаме от горноизвиканата функция, изписваме стойността на клетката
 }
 
+
+/**
+    Функция, която задава начална стойност на итератора използван
+    за принтиране на списъка и стартира рекурсивното извеждане
+*/
 void printBackFlist(flist<int> l) {
 	flist<int>::iterator i = l.begin();
 
@@ -125,8 +137,12 @@ void printBackFlist(flist<int> l) {
 	std::cout << std::endl;
 }
 
+
+/**
+    Фунцкия, която принтира свързан списък с две връзки в правилен ред
+*/
 void printList(std::list<int> l) {
-	std::list<int>::iterator i = l.begin(); 
+	std::list<int>::iterator i = l.begin();
 
 	while (i != l.end()) {
 		std::cout << *i << " ";
@@ -135,8 +151,11 @@ void printList(std::list<int> l) {
 	std::cout << std::endl;
 }
 
+/**
+    Фунцкия, която принтира свързан списък с две връзки в обратен ред
+*/
 void printBackList(std::list<int> l) {
-	std::list<int>::reverse_iterator i = l.rbegin();
+	std::list<int>::reverse_iterator i = l.rbegin();  ///Еквивалетно като предишните обхождания, но и използваме итератор, който обхожда списъка наобратно
 
 	while (i != l.rend()) {
 		std::cout << *i << " ";
@@ -147,7 +166,7 @@ void printBackList(std::list<int> l) {
 
 int main() {
 	flist<int> list1;		///forward_list<int> list1;
-	std::list<int>  list2;	
+	std::list<int>  list2;
 
 	std::cout << "Enter Flist: ";
 	inputFlist(list1);
