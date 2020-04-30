@@ -9,14 +9,19 @@
 
 <img src="./res/3_point_orientaion.png" style = "width : 65%; margin-left: auto; margin-right: auto; display: block;">
 
-Ще определим тяхната посока с помощта на ъгловите коефициенти на отсечките <img src="https://render.githubusercontent.com/render/math?math=(p_1, p_2)"> и <img src="https://render.githubusercontent.com/render/math?math=(p_2, p_3)">. Нека те да бъдат:
-* <img src="https://render.githubusercontent.com/render/math?math=a =(y_2 - y_1)/ (x_2 -x_1)">
-* <img src="https://render.githubusercontent.com/render/math?math=b =(y_3 - y_2)/(x_3 - x_2)">
+Ще определим тяхната посока с помощта на следната формула:
 
-Сега спрямо **а** и **b** можем да определим **ориентацията** им:
-* ***a > b*** - *по часовниковата стрелка*
-* ***a < b*** - *обратно на часовниковата стрелка*
-* ***а = b*** - *колинеарни*
+<img src="https://render.githubusercontent.com/render/math?math=d=(y_2 - y_1)*(x_3 - x_2) - (y_3 - y_2)*(x_2 - x_1)">
+
+където:
+
+* d = 0 - колинеарни
+* d > 0 - обратно на часовниковата стрелка
+* d < 0 - по часовниковата стрелка
+
+Повече как се достига до този резултат може да видите тук : https://math.stackexchange.com/questions/2941053/orientation-of-three-points-in-a-plane
+
+*Горното условие беше поправено, защото съм преписал грешно обяснение на получения резултат, поради грешен източник, за което се извинявам.*
 
 ##  *Разположение на две отсечки*
 
