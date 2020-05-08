@@ -1,0 +1,12 @@
+Slave number one
+1001
+0.5
+Slave number two
+1002
+0.3
+Slave number three
+1003
+10
+Slave number four
+1004
+0
