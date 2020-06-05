@@ -1,0 +1,74 @@
+Acer Aspire 1
+RAM:4
+HDD:86
+GHz:2.4
+Price:486
+IdeaPad S145
+RAM:4GB
+SSD:250
+HDD:1024
+GHz:2.6
+Price:505
+Aspire 3 A315-42
+RAM:8
+SSD:500
+GHz:3.5
+Price:659
+HP255 G7
+RAM:8
+SSD:500
+GHz:3.4
+Price:699
+Lenovo V155
+RAM:8
+SSD:250
+GHz:3.5
+Price:749
+Aspire 5
+RAM:8
+SSD:500
+GHz:3.6
+VRAM:2
+Price:889
+Pavilion 15
+RAM:12
+SSD:256
+GHz:3.6
+VRAM:2
+Price:1250
+Inspiron 3593
+RAM:8
+SSD:512
+GHz:3.9
+Price:1399
+IdeaPad 720
+RAM:8
+SSD:480
+GHz:3.5
+VRAM:4
+Price:1449
+Nitro 5
+RAM:16
+SSD:512
+GHz:4.1
+VRAM:4
+Price:1648
+Legion Y540
+RAM:16
+SSD:128
+HDD:1000
+GHz:4.5
+VRAM:4
+Price:1849
+TUF Gaming A15
+RAM:8
+SSD:512
+GHz:4.2
+VRAM:4
+Price:1999
+Nitro 7
+RAM:16
+SSD:1000
+GHz:4.5
+VRAM:6
+Price:2498
