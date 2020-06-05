@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <map>
+#include <map>			//map, multimap
 #include <algorithm>
+
+
 
 //Функция, която връща подадения низ от началото докато не се стигне до символ различен от буква
 std::string removeDelims(std::string str) {
