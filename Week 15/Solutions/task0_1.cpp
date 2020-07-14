@@ -1,9 +1,9 @@
-#include<iostream>
-#include<fstream>
-#include<set>
+#include <iostream>
+#include <fstream>
+#include <set>
 #include <unordered_map>
-#include<iomanip>
-#include<string>
+#include <iomanip>
+#include <string>
 
 typedef unsigned short int ushort;
 
@@ -21,7 +21,7 @@ struct Laptop {
 	float ghz;
 	ushort price, ram, vram, hdd, ssd;
 
-	Laptop() :name(""), ghz(0), price(0), ram(0), vram(0), hdd(0), ssd(0) {};
+	Laptop() : name(""), ghz(0), price(0), ram(0), vram(0), hdd(0), ssd(0) {};
 };
 
 bool operator<(const Laptop& lhs, const Laptop& rhs) {
@@ -172,8 +172,6 @@ void loadFile(std::string path, std::set<Laptop>& data) {
 void printLaptopSet(std::set<Laptop> data) {
 	std::set<Laptop>::iterator currRowBeg = data.begin();
 
-	
-
 	while (currRowBeg != data.end()) {
 		std::cout << std::setw(10) << "";
 		std::set<Laptop>::iterator itr = currRowBeg;
@@ -251,9 +249,16 @@ void removeLaptop(std::set<Laptop>& data) {
 	std::cout << "Choose laptop to remove: ";
 	std::cin >> choice;
 
+	if (choice <= 0) {
+		return;
+	}
+
 	itr = data.begin();
 
-	for (int i = 1; i < choice; i++) itr++;
+	for (int i = 1; i < choice; i++) {
+		itr++;
+		if (itr == data.end()) return;
+	}
 
 	data.erase(itr);
 }
@@ -281,6 +286,7 @@ void setFilther(std::set<Laptop>& data, std::set<Laptop>& subdata) {
 		if (itr->price >= lower_bound && itr->price <= upper_bound && (bool)itr->ssd == ssd) {
 			subdata.insert(*itr);
 		}
+
 		itr++;
 	}
 }
@@ -316,7 +322,7 @@ int main() {
 		default:
 			std::cout << "Not a valid option.." << std::endl;
 
-			break;
+			return 0;
 		}
 	}
 
